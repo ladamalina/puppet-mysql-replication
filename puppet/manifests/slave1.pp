@@ -53,6 +53,8 @@ class { '::mysql::server':
   }
 }
 
+class { 'firewall': }
+
 firewall { '100 allow mysql access':
   port   => [3306],
   proto  => tcp,
